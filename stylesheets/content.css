@@ -1,0 +1,583 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+p {
+    font-family: 'Courier Prime', monospace;
+}
+.first{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.fim{
+    width: 100%;
+    position: absolute;
+}
+.tel{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items:center;
+    margin-top: 15%;
+}
+
+.ff{
+    color: black;
+    font-size: 4vw;
+    animation: ctrl-change 1s steps(1) infinite;
+    animation-play-state: running;
+}
+@keyframes ctrl-change {
+    0% {color: black;}
+    50% {color: #006FF5;}
+}
+.star{
+    width: 20%;
+    animation: starround 6s linear infinite;
+}
+@keyframes starround {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* ------------------------------------------ */
+    .bricks {
+    display: flex;
+    align-content: center;
+    position: relative;
+    width:200%;
+    animation: circles-move 2s linear infinite;
+    margin-left: -50%;
+    }
+    
+    @keyframes circles-move {
+        0% {left: 0%}
+        100% {left: 50%}
+    }
+
+    .brick {
+    margin-top: 1%;
+    width: 10%;
+    height: 10%;
+    position: relative;
+    }
+    
+    .brick img {
+    position: absolute;
+    width: 93%;
+    }
+    
+    .brick .active {
+    display: none;
+    }
+    
+    .brick:hover .active {
+    display: initial;
+    }
+    
+    .brick:hover .inactive {
+    display: none;
+    }
+    .bricks2 {
+        z-index: 2;
+        display: flex;
+        align-content: center;
+        position: relative;
+        margin-left: 1%;
+        width:200%;
+        animation: circles-move2 2s linear infinite;
+        margin-right: -60%;
+        margin-top: 39%;
+    }
+
+    @keyframes circles-move2 {
+        0% {right: 0%}
+        100% {right: 50%}
+    }
+
+/* -----------second display----------- */
+.sec{
+    position: relative;
+    margin-top: 4.2%;
+    z-index: 1;
+}
+.kor{
+    margin-top: -0.1%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.swer{
+   width: 100%;
+   height: 32vw;
+   display: flex;
+   position: relative;
+   z-index: 1;
+   background: url("../img/v2.jpg");
+   animation: imogis 1s steps(1) infinite;
+   animation-play-state: running;  
+   background-size: 400% 100%;
+}
+@keyframes imogis{
+   0%{ background-position: -100%}
+   33.3%{ background-position: -200% 0px}
+   66.6%{ background-position: -300% 0px}
+   100%{ background-position: -400% 0px}
+}
+/* ----------------third display-------------------------- */
+.three{
+    position: relative;
+    display: flex;
+    margin-top: -0.3%;
+    z-index: 1;
+}
+
+.lef,.ri{
+    position: relative;
+    z-index: 1; 
+}
+.lef{
+    width: 50.1%;
+}
+.ri{
+    width: 50%;
+    margin-left: -0.1%;
+}
+.tab{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin-top: 1%;
+    height: 39vw;
+    background: url("../img/num.png");
+    animation: nn 5s steps(1) infinite;
+    animation-play-state: running;  
+    background-size: 800% 100%;
+}
+@keyframes nn{
+    0%{ background-position: -100% 0px}
+    14.2%{ background-position: -200% 0px}
+    28.4%{ background-position: -300% 0px}
+    42.6%{ background-position: -400% 0px}
+    56.8%{ background-position: -500% 0px}
+    71%{ background-position: -600% 0px}
+    85.2%{ background-position: -700% 0px}
+    93.4%{ background-position: -800% 0px}
+
+
+}
+.tt{
+    position: absolute;
+    z-index: 3;
+    margin-left: 37%;
+    margin-top: -10%;
+    width: 25%;
+}
+.float{
+    position: absolute;
+    z-index: 3;
+    margin-left: 48%;
+    margin-top: 3%;
+    /* background-color: blue; */
+    width:50%;
+    animation: sh-l-r 4s ease-in-out infinite;
+}
+.shar{
+    width: 20%;
+    height: 20%;
+}
+@keyframes sh-l-r {
+        0% {left: 0%}
+        50% {left: 30%}
+        100%{left:0%}
+}
+
+.float2{
+    position: absolute;
+    z-index: 3;
+    margin-left: 62%;
+    margin-top: 15%;
+    width:36%;
+    animation: sh-l-r 6s ease-in-out infinite;
+}
+@keyframes sh-l-r {
+    0% {left: 0%}
+    50% {left: 30%}
+    100%{left:0%}
+}
+.white{
+    position: absolute;
+    z-index: 2;
+    margin-left: 75%;
+    margin-top: -17%;
+    width: 25%;
+    animation: sc 2s linear infinite;
+    /* animation-play-state: paused; */
+    /*  */
+}
+@keyframes sc{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+/* .white:hover {
+    animation-play-state: running;
+} */
+
+
+.whh{
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 42%;
+    margin-top: 35%;
+}
+
+.up1, .up2, .up3, .up4, .up5, .up6, .up7,.up8,.up9,.up10,.up11,.up12,.up13,.up14,.up16,.up17,.up18, .up19,.up20,.up21,.up22{
+    width: 3%;
+    height: 8%;
+    position: absolute;
+    animation: pu1 4s linear infinite;
+}
+.up1{
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.up2{
+    margin-left: 7%;
+    margin-top: 25%;
+    animation-delay: 0.25s;
+}
+.up3{
+    margin-left: 15%;
+    margin-top: 30%;
+    animation-delay: 0.75s;
+}
+.up4{
+    margin-left: 13%;
+    margin-top: 15%;
+    animation-delay: 0.5s;
+}
+.up5{
+    margin-left: 17%;
+    margin-top: 21%;
+    animation-delay: 1.25s;
+}
+.up6{
+    margin-left: 17%;
+    margin-top: 8%;
+    animation-delay: 1s;
+}
+.up7{
+    margin-left: 27%;
+    margin-top: 5%;
+    animation-delay: 1.5s;
+}
+.up8{
+    margin-left: 32%;
+    margin-top: 2%;
+    animation-delay: 1.75s;
+}
+.up9{
+    margin-left: 43%;
+    margin-top: 4%;
+    animation-delay: 2.25s;
+}
+.up10{
+    margin-left: 32%;
+    margin-top: 18%;
+    animation-delay: 2s;
+}
+.up11{
+    margin-left: 45%;
+    margin-top: 25%;
+    animation-delay: 2.5s;
+}
+.up12{
+    margin-left: 55%;
+    margin-top: 12%;
+    animation-delay: 2.75s;
+}
+.up13{
+    margin-left: 57%;
+    margin-top: 16%;
+    animation-delay: 3s;
+}
+.up14{
+    margin-left: 67%;
+    margin-top: 29%;
+    animation-delay: 3.5s;
+}
+.up16{
+    margin-left: 68%;
+    margin-top: 1%;
+    animation-delay: 3.25s;
+}
+.up17{
+    margin-left: 75%;
+    margin-top: 10%;
+    animation-delay: 3.75s;
+}
+.up18{
+    margin-left: 79%;
+    margin-top: 7%;
+    animation-delay: 4s;
+}
+.up19{
+    margin-left: 76%;
+    margin-top: 19%;
+    animation-delay: 4.25s;
+}
+.up20{
+    margin-left: 80%;
+    margin-top: 23%;
+    animation-delay: 4.5s;
+}
+.up21{
+    margin-left: 90%;
+    margin-top: 16%;
+    animation-delay: 4.75s;
+}
+.up22{
+    margin-left: 92%;
+    margin-top: 23%;
+    animation-delay: 5s;
+}
+@keyframes pu1{
+    0% {top: 0%;}
+    50%{top: -20%;}
+    100%{top:0%}
+}
+/* ----=--------------------------------- */
+/* .cards1, .cards2 {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+  .house, .people, .heart, .flame {
+    width: 39.51vw;
+    height: 38.68vw;
+    border-radius: 1.81vw;
+    display: inline-block;
+    position: relative;
+    animation: blink .4s steps(1) alternate infinite;
+    animation-play-state: running;
+    background-color: #F3F3F3;
+    margin-right: 1.11vw;
+    margin-top: 1.11vw;
+    background-size: auto 100%;
+  }
+  .heart {
+    background-image: url("../images/heartsprint.svg");
+    margin-left: -1.53vw;
+  }
+/* ----=--------------------------------- */
+.four{
+    position: relative;
+    display: flex;
+    margin-top: -0.3%;
+    z-index: 1;
+    width: 100vw;
+}
+.bole{
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+.boom{
+    width: 50%;
+    height: 20vw;
+    position: relative;
+    z-index: 2;
+    animation: bo .85s steps(1) infinite;
+    animation-play-state: running; 
+    background-size: auto 100%;
+    background: url("../img/boom.png");
+}
+@keyframes bo{
+    0%{ background-position: 0% 0}
+    25%{ background-position: 100% 0}
+    50%{ background-position: 200% 0px}
+    75%{ background-position: 300% 0px}
+    100%{ background-position: 400% 0px}
+}
+.five{
+    width: 100.5vw;
+    position: relative;
+    z-index: 1;
+    margin-top: -4%;
+    display: flex;
+}
+.fi{
+    width: 100.5vw;
+    position: relative;
+    z-index: 1;
+}
+.kolfa{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    margin-top: -10%;
+    margin-left: 8%;
+}
+.bl1, .bl2, .bl3, .bl4{
+    position: relative;
+    width:38%;
+}
+.bl2, .bl3, .bl4{
+    margin-left: -23%;
+}
+.bl1{
+    animation: sj1 5s linear infinite;
+}
+@keyframes sj1{
+    0%{left: 0%;}
+    50%{left: 22.5%;}
+    100%{left: 0%;}
+}
+.bl2{
+    animation: sj2 5s linear infinite;
+}
+@keyframes sj2{
+    0%{left: 0%;}
+    50%{left: 7.5%;}
+    /* 50%{left: 5%;} */
+    100%{left: 0%;}
+}
+.bl3{
+    animation: sj3 5s linear infinite;
+}
+@keyframes sj3{
+    0%{right: 0%;}
+    50%{right: 7.5%;}
+    /* 50%{left: 5%;} */
+    100%{right: 0%;}
+}
+.bl4{
+    animation: sj4 5s linear infinite;
+}
+@keyframes sj4{
+    0%{right: 0%;}
+    50%{right: 22.5%;}
+    100%{right: 0%;}
+}
+.lt{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.gate, .g1, .g14, .g37{
+    position: relative;
+    font-size: 5vw;
+    margin-top: 7%;
+}
+.gate{
+    margin-left: -1%;
+    animation: mig1 5s steps(1) infinite;
+}
+@keyframes mig1 {
+    0% {color: black;}
+    20% {color: #006FF5;}
+    40% {color: black;}
+    60% {color: black;}
+    80% {color: black;}
+    100% {color: black;}
+
+
+}
+.g1{
+    margin-left: -4.5%;
+    animation: mig2 5s steps(1) infinite;
+}
+@keyframes mig2 {
+    0% {color: black;}
+    20% {color: black;}
+    40% {color: #006FF5;}
+    60% {color: black;}
+    80% {color: black;}
+    100% {color: black;}
+
+}
+.g14{
+    animation: mig3 5s steps(1) infinite;
+}
+@keyframes mig3 {
+    0% {color: black;}
+    20% {color: black;}
+    40% {color: black;}
+    60% {color: #006FF5;}
+    80% {color: black;}
+    100% {color: black;}
+
+}
+.g37{
+    animation: mig4 5s steps(1) infinite;
+}
+@keyframes mig4 {
+    0% {color: black;}
+    20% {color: black;}
+    40% {color: black;}
+    60% {color: black;}
+    80% {color: #006FF5;}
+    100% {color: black;}
+}
+.ttw{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.threeteleportwhite{
+    position: relative;
+    width:90%;
+    transition: top 2s ease 0s;
+    top: 0;
+}
+.threeteleportwhite:hover {
+    top: 22%;
+  }
+.podval{
+    width: 100%;
+    background-color: black;
+    height: 14%;
+    position: relative;
+    z-index: 1;
+}
+.podval:hover {
+    background: #006FF5;
+    transition: all .2s ease-out;
+  }
+.pod{
+    position: absolute;
+    z-index: 2;
+    margin-top: 2%;
+    margin-left: -50%;
+    font-size: 4vw;
+    color: white;
+    white-space: nowrap;
+    animation: text-move1 6s infinite linear;
+}
+  @keyframes text-move1 {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-50.5%)}
+  }
+
+
